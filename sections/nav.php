@@ -1,26 +1,24 @@
 <?php
 $nav_links = [
-    ['label' => 'Home',      'href' => '#'],
-    ['label' => 'About',     'href' => '#'],
-    ['label' => 'Services',  'href' => '#'],
-    ['label' => 'Locations', 'href' => '#'],
-    ['label' => 'Contact',   'href' => '#'],
+    ['label' => 'About Us',          'href' => '#about'],
+    ['label' => 'Service Locations', 'href' => '#areas'],
+    ['label' => 'Contact Us',        'href' => '#contact'],
 ];
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark trc-navbar sticky-top">
+<nav class="mv-navbar navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
 
         <!-- Logo -->
-        <a class="navbar-brand trc-brand" href="#">
+        <a class="navbar-brand mv-brand" href="#">
             <img
                 src="assets/images/logo.png"
-                alt="Timely Response Couriers"
-                class="trc-logo-img"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+                alt="VIP Pro Moving"
+                class="mv-logo-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"
             >
-            <span class="trc-logo-text" style="display:none;">
-                <span class="trc-logo-highlight">TRC</span>
+            <span class="mv-logo-text" style="display:none;">
+                <span class="mv-logo-highlight">VIP</span> Pro Moving
             </span>
         </a>
 
@@ -29,8 +27,8 @@ $nav_links = [
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#trcNavMenu"
-            aria-controls="trcNavMenu"
+            data-bs-target="#mvNavMenu"
+            aria-controls="mvNavMenu"
             aria-expanded="false"
             aria-label="Toggle navigation"
         >
@@ -38,12 +36,12 @@ $nav_links = [
         </button>
 
         <!-- Nav links -->
-        <div class="collapse navbar-collapse" id="trcNavMenu">
+        <div class="collapse navbar-collapse" id="mvNavMenu">
             <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-                <?php foreach ($nav_links as $index => $link): ?>
+                <?php foreach ($nav_links as $link): ?>
                 <li class="nav-item">
                     <a
-                        class="nav-link trc-nav-link<?php echo $index === 0 ? ' active' : ''; ?>"
+                        class="nav-link mv-nav-link"
                         href="<?php echo htmlspecialchars($link['href']); ?>"
                     >
                         <?php echo htmlspecialchars($link['label']); ?>
@@ -51,7 +49,7 @@ $nav_links = [
                 </li>
                 <?php endforeach; ?>
                 <li class="nav-item ms-lg-3">
-                    <a class="btn trc-btn-nav" href="#">Call Now</a>
+                    <a class="btn mv-btn-nav" href="#quote">Request a Quote</a>
                 </li>
             </ul>
         </div>
